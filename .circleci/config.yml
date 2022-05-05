@@ -8,7 +8,7 @@ jobs:
     - image: testim/docker-cli
     steps:
       - run: mkdir -p $CIRCLE_TEST_REPORTS/testim/
-      - run: testim --token $TestimToken --project $TestimProject --test-plan "circleCI" --parallel 2 --grid "Testim-Grid" --mode selenium --report-file $CIRCLE_TEST_REPORTS/testim/results.xml
+      - run: testim --token $TestimToken --project $TestimProject --test-plan "circleCI" --parallel 2 --grid "Testim-Grid" --mode selenium --report-file $CIRCLE_TEST_REPORTS/testim/results.xml --turbo-mode
       - store_artifacts:
           path: /tmp/circleci-test-results
       - store_test_results:

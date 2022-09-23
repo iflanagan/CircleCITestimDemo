@@ -1,3 +1,3 @@
 Testim Test 
 
-example demo
+example
